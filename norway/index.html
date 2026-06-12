@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Norway, Midsummer 2026 — Joseph &amp; Linda</title>
+    <style>
+      :root {
+        --ink: #1c2422;
+        --ink-soft: #46524d;
+        --muted: #79857f;
+        --hairline: #e0ddd4;
+        --hairline-dark: #c9c5b8;
+        --paper: #faf8f2;
+        --paper-deep: #f2efe6;
+        --panel: #fffefb;
+        --fjord: #29615f;
+        --fjord-deep: #1d4847;
+        --moss: #6a7d52;
+        --ochre: #b07b2e;
+        --rust: #94503f;
+        --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+        --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a { color: var(--fjord); }
+
+      .container {
+        width: min(960px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      /* ---------- Hero ---------- */
+
+      .hero {
+        position: relative;
+        min-height: 76vh;
+        display: grid;
+        align-items: end;
+        overflow: hidden;
+        background: #15201f;
+      }
+
+      .hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.92;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(21, 32, 31, 0.15) 0%, rgba(21, 32, 31, 0) 35%, rgba(21, 32, 31, 0.62) 82%, rgba(21, 32, 31, 0.78) 100%);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        width: min(960px, calc(100% - 48px));
+        margin: 0 auto;
+        padding: 90px 0 64px;
+        color: #f6f3ea;
+        text-align: center;
+      }
+
+      .hero .eyebrow {
+        margin: 0 0 18px;
+        font-size: 0.74rem;
+        font-weight: 600;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+        color: rgba(246, 243, 234, 0.85);
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: clamp(2.9rem, 7.5vw, 5.4rem);
+        line-height: 1.04;
+        letter-spacing: -0.01em;
+      }
+
+      .hero h1 em {
+        font-style: italic;
+      }
+
+      .hero-rule {
+        width: 64px;
+        height: 1px;
+        margin: 26px auto;
+        background: rgba(246, 243, 234, 0.55);
+        border: 0;
+      }
+
+      .hero-meta {
+        margin: 0;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.12rem;
+        color: rgba(246, 243, 234, 0.92);
+      }
+
+      /* ---------- Sticky nav ---------- */
+
+      .trip-nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(250, 248, 242, 0.94);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--hairline);
+      }
+
+      .trip-nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 8px;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        width: min(960px, calc(100% - 24px));
+      }
+
+      .trip-nav a {
+        display: inline-block;
+        padding: 14px 14px 12px;
+        border-bottom: 2px solid transparent;
+        color: var(--ink-soft);
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .trip-nav a:hover,
+      .trip-nav a:focus {
+        color: var(--fjord-deep);
+        border-bottom-color: var(--fjord);
+      }
+
+      .trip-nav a small {
+        display: block;
+        margin-top: 1px;
+        font-size: 0.68rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-transform: none;
+        color: var(--muted);
+      }
+
+      /* ---------- Phases ---------- */
+
+      main { padding: 24px 0 80px; }
+
+      .phase {
+        padding-top: 56px;
+        scroll-margin-top: 64px;
+      }
+
+      .phase-header {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+        margin-bottom: 8px;
+      }
+
+      .phase-header .phase-no {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1rem;
+        color: var(--ochre);
+        white-space: nowrap;
+      }
+
+      .phase-header h2 {
+        margin: 0;
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+      }
+
+      .phase-header .phase-dates {
+        margin-left: auto;
+        font-size: 0.76rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .phase-intro {
+        margin: 0 0 30px;
+        max-width: 620px;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.02rem;
+        color: var(--ink-soft);
+      }
+
+      .phase-rule {
+        height: 1px;
+        margin: 14px 0 22px;
+        background: var(--hairline-dark);
+        border: 0;
+      }
+
+      /* ---------- Day timeline ---------- */
+
+      .day {
+        display: grid;
+        grid-template-columns: 92px 1fr;
+        gap: 28px;
+        padding: 26px 0;
+        border-top: 1px solid var(--hairline);
+      }
+
+      .day:first-of-type { border-top: 0; }
+
+      .day-marker {
+        text-align: right;
+        padding-top: 2px;
+      }
+
+      .day-marker .weekday {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ochre);
+      }
+
+      .day-marker .date {
+        display: block;
+        margin-top: 2px;
+        font-family: var(--serif);
+        font-size: 2rem;
+        line-height: 1;
+        color: var(--ink);
+      }
+
+      .day-marker .month {
+        display: block;
+        margin-top: 4px;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .day-body h3 {
+        margin: 0 0 4px;
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 1.42rem;
+        line-height: 1.2;
+      }
+
+      .day-base {
+        margin: 0 0 14px;
+        font-size: 0.84rem;
+        color: var(--muted);
+      }
+
+      .day-base strong { color: var(--ink-soft); font-weight: 600; }
+
+      /* ---------- Events ---------- */
+
+      .event {
+        margin-top: 14px;
+        padding: 18px 20px;
+        background: var(--panel);
+        border: 1px solid var(--hairline);
+        border-radius: 4px;
+      }
+
+      .event-head {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+        margin-bottom: 4px;
+      }
+
+      .badge {
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--fjord);
+      }
+
+      .badge.hotel { color: var(--ochre); }
+      .badge.train { color: var(--moss); }
+      .badge.cruise { color: var(--rust); }
+      .badge.open { color: var(--muted); }
+
+      .event-title {
+        font-family: var(--serif);
+        font-size: 1.08rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .event-time {
+        margin-left: auto;
+        font-size: 0.82rem;
+        font-variant-numeric: tabular-nums;
+        color: var(--ink-soft);
+        white-space: nowrap;
+      }
+
+      .event-sub {
+        margin: 0 0 10px;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 8px 22px;
+        margin: 12px 0 0;
+        padding: 12px 0 0;
+        border-top: 1px solid var(--hairline);
+      }
+
+      .fact { font-size: 0.86rem; line-height: 1.45; }
+
+      .fact dt {
+        margin: 0;
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .fact dd {
+        margin: 2px 0 0;
+        color: var(--ink);
+      }
+
+      .track-link {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--fjord);
+        text-decoration: none;
+        border-bottom: 1px solid var(--fjord);
+        padding-bottom: 1px;
+      }
+
+      .track-link:hover { color: var(--fjord-deep); border-bottom-color: var(--fjord-deep); }
+
+      .open-slot {
+        margin-top: 14px;
+        padding: 14px 20px;
+        border: 1px dashed var(--hairline-dark);
+        border-radius: 4px;
+        background: transparent;
+      }
+
+      .open-slot .badge { color: var(--muted); }
+
+      .open-slot p {
+        margin: 4px 0 0;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+      }
+
+      .slot-label {
+        display: inline-block;
+        min-width: 86px;
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .day-notes {
+        margin: 14px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .day-notes li {
+        display: flex;
+        gap: 10px;
+        padding: 7px 0;
+        font-size: 0.92rem;
+        border-top: 1px dotted var(--hairline);
+      }
+
+      .day-notes li:first-child { border-top: 0; }
+
+      /* ---------- Endnotes ---------- */
+
+      .endnotes {
+        margin-top: 72px;
+        padding-top: 40px;
+        border-top: 1px solid var(--hairline-dark);
+      }
+
+      .endnotes h2 {
+        margin: 0 0 6px;
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 1.7rem;
+      }
+
+      .endnotes-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 24px;
+      }
+
+      .endnotes h3 {
+        margin: 0 0 12px;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ochre);
+      }
+
+      .endnotes h3.gaps { color: var(--rust); }
+
+      .endnotes ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .endnotes li {
+        padding: 10px 0;
+        border-top: 1px solid var(--hairline);
+        font-size: 0.92rem;
+        color: var(--ink-soft);
+      }
+
+      .endnotes li:first-child { border-top: 0; padding-top: 0; }
+
+      footer {
+        margin-top: 56px;
+        padding-top: 20px;
+        border-top: 1px solid var(--hairline);
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 0.9rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      /* ---------- Responsive ---------- */
+
+      @media (max-width: 720px) {
+        .container { width: calc(100% - 36px); }
+
+        .hero { min-height: 62vh; }
+
+        .day {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .day-marker {
+          display: flex;
+          align-items: baseline;
+          gap: 8px;
+          text-align: left;
+        }
+
+        .day-marker .date { font-size: 1.4rem; }
+
+        .phase-header { flex-wrap: wrap; gap: 8px 16px; }
+        .phase-header .phase-dates { margin-left: 0; width: 100%; }
+
+        .event-time { margin-left: 0; width: 100%; }
+
+        .endnotes-grid { grid-template-columns: 1fr; gap: 28px; }
+      }
+
+      @media print {
+        .trip-nav { display: none; }
+        .hero { min-height: 0; }
+        .event { break-inside: avoid; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <img src="assets/norway-hero.png" alt="Norwegian fjord with mountains and colorful waterfront buildings">
+      <div class="hero-content">
+        <p class="eyebrow">Joseph &amp; Linda &middot; Summer 2026</p>
+        <h1>Norway, by way<br>of <em>New York</em></h1>
+        <hr class="hero-rule">
+        <p class="hero-meta">June 23 — July 3 &middot; San Francisco · New York · Oslo · Flåm · Bergen</p>
+      </div>
+    </header>
+
+    <nav class="trip-nav" aria-label="Trip phases">
+      <ul>
+        <li><a href="#new-york">New York<small>Jun 23–26</small></a></li>
+        <li><a href="#oslo">Oslo<small>Jun 27–28</small></a></li>
+        <li><a href="#flam">Flåm<small>Jun 29–30</small></a></li>
+        <li><a href="#bergen">Bergen<small>Jul 1–2</small></a></li>
+        <li><a href="#home">Home<small>Jul 2–3</small></a></li>
+        <li><a href="#notes">Notes</a></li>
+      </ul>
+    </nav>
+
+    <main class="container">
+
+      <!-- ================= NEW YORK ================= -->
+      <section class="phase" id="new-york">
+        <div class="phase-header">
+          <span class="phase-no">I.</span>
+          <h2>East to New York</h2>
+          <span class="phase-dates">Jun 23 – 26</span>
+        </div>
+        <hr class="phase-rule">
+        <p class="phase-intro">A cross-country hop and a few days in Jersey City before the overnight to Europe.</p>
+
+        <article class="day">
+          <div class="day-marker">
+            <span class="weekday">Tue</span>
+            <span class="date">23</span>
+            <span class="month">June</span>
+          </div>
+          <div class="day-body">
+            <h3>Fly San Francisco to New York</h3>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge">Flight</span>
+                <span class="event-title">Alaska Airlines AS 42 · SFO → JFK</span>
+                <span class="event-time">1:38 PM → 10:26 PM</span>
+              </div>
+              <dl class="facts">
+                <div class="fact"><dt>Confirmation</dt><dd>GSWONS</dd></div>
+                <div class="fact"><dt>Seats</dt><dd>Joseph 6F, Xin Yi 6E</dd></div>
+                <div class="fact"><dt>Cabin</dt><dd>Premium Class selected</dd></div>
+                <div class="fact"><dt>Tracking ident</dt><dd>ASA42</dd></div>
+              </dl>
+              <a class="track-link" href="https://www.flightaware.com/live/flight/ASA42" target="_blank" rel="noreferrer">Track on FlightAware</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-marker">
+            <span class="weekday">Wed</span>
+            <span class="date">24</span>
+            <span class="month">June</span>
+          </div>
+          <div class="day-body">
+            <h3>Settle into Jersey City</h3>
+            <p class="day-base">Base through Jun 27: <strong>Canopy by Hilton Jersey City Arts District</strong></p>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge hotel">Hotel · Check-in</span>
+                <span class="event-title">Canopy by Hilton Jersey City Arts District</span>
+                <span class="event-time">From 3:00 PM</span>
+              </div>
+              <p class="event-sub">159 Morgan Street, Jersey City, NJ 07302 · +1 201 241 4664</p>
+              <dl class="facts">
+                <div class="fact"><dt>Stay</dt><dd>Jun 24, 3:00 PM → Jun 27, 12:00 PM</dd></div>
+                <div class="fact"><dt>Confirmation</dt><dd>3481815054</dd></div>
+                <div class="fact"><dt>Room</dt><dd>1 king bed, 2 adults</dd></div>
+                <div class="fact"><dt>Rate</dt><dd>$1,150.46 total, non-refundable</dd></div>
+                <div class="fact"><dt>Parking</dt><dd>Self $28/night, valet $45/night</dd></div>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-marker">
+            <span class="weekday">Fri</span>
+            <span class="date">26</span>
+            <span class="month">June</span>
+          </div>
+          <div class="day-body">
+            <h3>Late-night departure for Europe</h3>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge">Flight</span>
+                <span class="event-title">Delta DL 8742 · JFK → CDG</span>
+                <span class="event-time">11:30 PM → 12:55 PM (Jun 27)</span>
+              </div>
+              <p class="event-sub">Operated by Air France as AF 9</p>
+              <dl class="facts">
+                <div class="fact"><dt>Confirmation</dt><dd>F9YNZ4</dd></div>
+                <div class="fact"><dt>Seat</dt><dd>Joseph 55K</dd></div>
+                <div class="fact"><dt>Bags</dt><dd>Carry-on free, first checked bag free</dd></div>
+                <div class="fact"><dt>Tracking ident</dt><dd>DAL8742 / AFR9</dd></div>
+              </dl>
+              <a class="track-link" href="https://www.flightaware.com/live/flight/DAL8742" target="_blank" rel="noreferrer">Track on FlightAware</a>
+            </div>
+
+            <ul class="day-notes">
+              <li><span class="slot-label">Note</span>The Jersey City stay runs through Jun 27 checkout, so the room covers this late departure night.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- ================= OSLO ================= -->
+      <section class="phase" id="oslo">
+        <div class="phase-header">
+          <span class="phase-no">II.</span>
+          <h2>Oslo</h2>
+          <span class="phase-dates">Jun 27 – 28</span>
+        </div>
+        <hr class="phase-rule">
+        <p class="phase-intro">Through Paris and into midsummer Oslo — two nights at Sommerro before heading west.</p>
+
+        <article class="day">
+          <div class="day-marker">
+            <span class="weekday">Sat</span>
+            <span class="date">27</span>
+            <span class="month">June</span>
+          </div>
+          <div class="day-body">
+            <h3>Land in Oslo and settle in</h3>
+            <p class="day-base">Base: <strong>Sommerro, Oslo</strong></p>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge">Flight</span>
+                <span class="event-title">Delta DL 8484 · CDG → OSL</span>
+                <span class="event-time">2:15 PM → 4:40 PM</span>
+              </div>
+              <p class="event-sub">Operated by Air France as AF 1774 · connection in Paris</p>
+              <dl class="facts">
+                <div class="fact"><dt>Confirmation</dt><dd>F9YNZ4</dd></div>
+                <div class="fact"><dt>Seat</dt><dd>Joseph 18C</dd></div>
+                <div class="fact"><dt>Tracking ident</dt><dd>AFR1774</dd></div>
+              </dl>
+              <a class="track-link" href="https://www.flightaware.com/live/flight/AFR1774" target="_blank" rel="noreferrer">Track on FlightAware</a>
+            </div>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge hotel">Hotel · Check-in</span>
+                <span class="event-title">Sommerro</span>
+                <span class="event-time">From 3:00 PM</span>
+              </div>
+              <p class="event-sub">Sommerrogata 1, Oslo 0255, Norway</p>
+              <dl class="facts">
+                <div class="fact"><dt>Stay</dt><dd>Jun 27 – 29 · checkout 12:00 PM</dd></div>
+                <div class="fact"><dt>Confirmation</dt><dd>35645SG119762-</dd></div>
+                <div class="fact"><dt>Trip ID</dt><dd>1018823279</dd></div>
+                <div class="fact"><dt>Room</dt><dd>Superior Room, 1 king bed, 2 guests</dd></div>
+                <div class="fact"><dt>Benefits</dt><dd>Breakfast for 2, $100 property credit</dd></div>
+              </dl>
+            </div>
+
+            <ul class="day-notes">
+              <li><span class="slot-label">Evening</span>Easy dinner and a short waterfront walk if energy allows.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-marker">
+            <span class="weekday">Sun</span>
+            <span class="date">28</span>
+            <span class="month">June</span>
+          </div>
+          <div class="day-body">
+            <h3>Oslo culture, waterfront, sauna</h3>
+            <p class="day-base">Base: <strong>Sommerro, Oslo</strong></p>
+
+            <div class="open-slot">
+              <span class="badge open">To plan</span>
+              <p><span class="slot-label">Morning</span>Opera House, MUNCH, or the National Museum.</p>
+              <p><span class="slot-label">Afternoon</span>Neighborhoods, coffee, shops, or a fjord-side walk.</p>
+              <p><span class="slot-label">Evening</span>Sauna, relaxed dinner, early night before the train day.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ================= FLÅM ================= -->
+      <section class="phase" id="flam">
+        <div class="phase-header">
+          <span class="phase-no">III.</span>
+          <h2>Flåm &amp; the fjords</h2>
+          <span class="phase-dates">Jun 29 – 30</span>
+        </div>
+        <hr class="phase-rule">
+        <p class="phase-intro">The Bergen Line over the mountains, the Flåm Railway down to the water, and a cruise through the Nærøyfjord. Two nights in Flåm with an intentional room switch.</p>
+
+        <article class="day">
+          <div class="day-marker">
+            <span class="weekday">Mon</span>
+            <span class="date">29</span>
+            <span class="month">June</span>
+          </div>
+          <div class="day-body">
+            <h3>Scenic rail, Oslo to Flåm</h3>
+            <p class="day-base">Base: <strong>Flåmsbrygga Apartments</strong></p>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge train">Train</span>
+                <span class="event-title">Oslo S → Flåm stasjon</span>
+                <span class="event-time">08:23 → 14:22 · 5 h 59 min</span>
+              </div>
+              <p class="event-sub">Bergen Line to Myrdal, then the Flåm Railway down to the fjord. Check out of Sommerro before departure.</p>
+              <dl class="facts">
+                <div class="fact"><dt>Booking</dt><dd>9CE-LZT-OWM · ID 8MGR63QM</dd></div>
+                <div class="fact"><dt>Ticket</dt><dd>2× Plus Refundable</dd></div>
+                <div class="fact"><dt>Oslo → Myrdal</dt><dd>F4 Bergen, track 4 · car 1, seats 7 &amp; 8</dd></div>
+                <div class="fact"><dt>Myrdal change</dt><dd>Arrive 13:04, track 1 · 1 min walk, 20 min wait</dd></div>
+                <div class="fact"><dt>Myrdal → Flåm</dt><dd>R45 Flåm, 13:24 → 14:22 · track 11, free seating</dd></div>
+                <div class="fact"><dt>Arrival</dt><dd>Flåm stasjon 14:22, track 4</dd></div>
+              </dl>
+            </div>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge hotel">Hotel · Check-in</span>
+                <span class="event-title">Flåmsbrygga Apartments</span>
+                <span class="event-time">After 3:00 PM</span>
+              </div>
+              <p class="event-sub">A-Feltvegen 25, 5743 Flåm, Norway</p>
+              <dl class="facts">
+                <div class="fact"><dt>Stay</dt><dd>Jun 29 – 30 · checkout before 10:00</dd></div>
+                <div class="fact"><dt>Confirmation</dt><dd>YR35HX84AC</dd></div>
+                <div class="fact"><dt>Room</dt><dd>Flåm Harbour studio apartment with balcony</dd></div>
+                <div class="fact"><dt>Paid</dt><dd>10,186 NOK · non-refundable</dd></div>
+              </dl>
+            </div>
+
+            <ul class="day-notes">
+              <li><span class="slot-label">Evening</span>To plan: quiet fjord dinner, short walk, views.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-marker">
+            <span class="weekday">Tue</span>
+            <span class="date">30</span>
+            <span class="month">June</span>
+          </div>
+          <div class="day-body">
+            <h3>Fjord cruise and the room switch</h3>
+            <p class="day-base">Base: <strong>Flåmsbrygga Hotell</strong> (intentional switch from the apartment)</p>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge cruise">Cruise</span>
+                <span class="event-title">Nærøyfjord cruise · Flåm → Gudvangen</span>
+                <span class="event-time">3:00 PM → 5:00 PM</span>
+              </div>
+              <p class="event-sub">Two-hour cruise through the Nærøyfjord, then the included shuttlebus back: Gudvangen → Flåm, 5:15 – 5:35 PM.</p>
+              <dl class="facts">
+                <div class="fact"><dt>Party</dt><dd>2 adults</dd></div>
+                <div class="fact"><dt>Price</dt><dd>NOK 1,670 total</dd></div>
+                <div class="fact"><dt>Tickets</dt><dd>2× outbound cruise, 2× return bus</dd></div>
+                <div class="fact"><dt>Logistics</dt><dd>Starts and ends in Flåm · store luggage during room switch</dd></div>
+              </dl>
+            </div>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge hotel">Hotel · Switch</span>
+                <span class="event-title">Flåmsbrygga Hotell</span>
+                <span class="event-time">After 3:00 PM</span>
+              </div>
+              <p class="event-sub">A-feltsvegen 25, 5743 Flåm, Norway · same waterfront complex as the apartments</p>
+              <dl class="facts">
+                <div class="fact"><dt>Stay</dt><dd>Jun 30 – Jul 1 · checkout before 11:00</dd></div>
+                <div class="fact"><dt>Confirmation</dt><dd>EL23HD97FO</dd></div>
+                <div class="fact"><dt>Room</dt><dd>Double room with balcony</dd></div>
+                <div class="fact"><dt>Paid</dt><dd>9,261 NOK · breakfast included, non-refundable</dd></div>
+              </dl>
+            </div>
+
+            <ul class="day-notes">
+              <li><span class="slot-label">Morning</span>Check out of the apartment before 10:00, store luggage with Flåmsbrygga, slow lunch; check into the hotel before the cruise if the room is ready.</li>
+              <li><span class="slot-label">Evening</span>Finish check-in if needed, then dinner and a balcony night before continuing west.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- ================= BERGEN ================= -->
+      <section class="phase" id="bergen">
+        <div class="phase-header">
+          <span class="phase-no">IV.</span>
+          <h2>Bergen</h2>
+          <span class="phase-dates">Jul 1 – 2</span>
+        </div>
+        <hr class="phase-rule">
+        <p class="phase-intro">Back over Myrdal and down to the coast — one night by the fish market before flying home.</p>
+
+        <article class="day">
+          <div class="day-marker">
+            <span class="weekday">Wed</span>
+            <span class="date">1</span>
+            <span class="month">July</span>
+          </div>
+          <div class="day-body">
+            <h3>Flåm to Bergen, then Bryggen</h3>
+            <p class="day-base">Base: <strong>Bergen Børs Hotel</strong></p>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge train">Train</span>
+                <span class="event-title">Flåm → Bergen stasjon</span>
+                <span class="event-time">12:10 → 15:24 · 3 h 14 min</span>
+              </div>
+              <p class="event-sub">Flåm Railway up to Myrdal, then the Bergen Line west. Check out of Flåmsbrygga Hotell before 11:00.</p>
+              <dl class="facts">
+                <div class="fact"><dt>Booking</dt><dd>648-AFE-UYB · ID 9KZLN19Q</dd></div>
+                <div class="fact"><dt>Price</dt><dd>NOK 1,892 total</dd></div>
+                <div class="fact"><dt>Flåm → Myrdal</dt><dd>R45 Myrdal, 12:10 → 13:08 · track 4, free seating</dd></div>
+                <div class="fact"><dt>Myrdal change</dt><dd>Arrive 13:08, track 11 · 1 min walk, 5 min wait</dd></div>
+                <div class="fact"><dt>Myrdal → Bergen</dt><dd>R40 Bergen, 13:13 → 15:24, track 1 · car 3, seats 142 &amp; 143</dd></div>
+                <div class="fact"><dt>Arrival</dt><dd>Bergen stasjon 15:24, track 2</dd></div>
+              </dl>
+            </div>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge hotel">Hotel · Check-in</span>
+                <span class="event-title">Bergen Børs Hotel</span>
+                <span class="event-time">Afternoon</span>
+              </div>
+              <p class="event-sub">Vågsallmenningen 1, 5014 Bergen, Norway · by the fish market and Torgallmenningen</p>
+              <dl class="facts">
+                <div class="fact"><dt>Stay</dt><dd>Jul 1 – 2</dd></div>
+                <div class="fact"><dt>Confirmation</dt><dd>VZ80KM27SU</dd></div>
+                <div class="fact"><dt>Room</dt><dd>Superior Room, 2 adults</dd></div>
+                <div class="fact"><dt>Paid</dt><dd>5,486 NOK · breakfast included, non-refundable</dd></div>
+              </dl>
+            </div>
+
+            <ul class="day-notes">
+              <li><span class="slot-label">Evening</span>To plan: a nicer final-Norway dinner reservation.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- ================= HOME ================= -->
+      <section class="phase" id="home">
+        <div class="phase-header">
+          <span class="phase-no">V.</span>
+          <h2>The long way home</h2>
+          <span class="phase-dates">Jul 2 – 3</span>
+        </div>
+        <hr class="phase-rule">
+        <p class="phase-intro">Bergen to Newark via Iceland, one last Jersey City night, then JFK back to San Francisco.</p>
+
+        <article class="day">
+          <div class="day-marker">
+            <span class="weekday">Thu</span>
+            <span class="date">2</span>
+            <span class="month">July</span>
+          </div>
+          <div class="day-body">
+            <h3>Slow Bergen morning, fly to New York</h3>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge">Flight</span>
+                <span class="event-title">Icelandair FI 335 · BGO → KEF</span>
+                <span class="event-time">3:20 PM → 3:50 PM</span>
+              </div>
+              <p class="event-sub">Breakfast at Bergen Børs, a low-key walk, pack and check out before heading to the airport.</p>
+              <dl class="facts">
+                <div class="fact"><dt>Booking ref</dt><dd>BZHO3B</dd></div>
+                <div class="fact"><dt>Seat</dt><dd>Joseph 12D</dd></div>
+                <div class="fact"><dt>Connection</dt><dd>1 h 10 min at KEF</dd></div>
+                <div class="fact"><dt>Tracking ident</dt><dd>ICE335</dd></div>
+              </dl>
+              <a class="track-link" href="https://www.flightaware.com/live/flight/ICE335" target="_blank" rel="noreferrer">Track on FlightAware</a>
+            </div>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge">Flight</span>
+                <span class="event-title">Icelandair FI 623 · KEF → EWR</span>
+                <span class="event-time">5:00 PM → 7:15 PM</span>
+              </div>
+              <p class="event-sub">Arrives Newark Terminal B · pre-purchased meal on board · 1 checked bag included</p>
+              <dl class="facts">
+                <div class="fact"><dt>Booking ref</dt><dd>BZHO3B</dd></div>
+                <div class="fact"><dt>Seat</dt><dd>Joseph 23C</dd></div>
+                <div class="fact"><dt>Tracking ident</dt><dd>ICE623</dd></div>
+              </dl>
+              <a class="track-link" href="https://www.flightaware.com/live/flight/ICE623" target="_blank" rel="noreferrer">Track on FlightAware</a>
+            </div>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge hotel">Hotel · Overnight</span>
+                <span class="event-title">Canopy by Hilton Jersey City Arts District</span>
+                <span class="event-time">From 3:00 PM</span>
+              </div>
+              <p class="event-sub">159 Morgan Street, Jersey City, NJ 07302 · +1 201 241 4664 · transfer from EWR after landing</p>
+              <dl class="facts">
+                <div class="fact"><dt>Stay</dt><dd>Jul 2, 3:00 PM → Jul 3, 12:00 PM</dd></div>
+                <div class="fact"><dt>Confirmation</dt><dd>3491690051</dd></div>
+                <div class="fact"><dt>Room</dt><dd>1 king bed, 1 adult listed</dd></div>
+                <div class="fact"><dt>Rate</dt><dd>$270.86 total · Honors non-refundable</dd></div>
+                <div class="fact"><dt>Parking</dt><dd>Self $28/night, valet $45/night</dd></div>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-marker">
+            <span class="weekday">Fri</span>
+            <span class="date">3</span>
+            <span class="month">July</span>
+          </div>
+          <div class="day-body">
+            <h3>New York to San Francisco</h3>
+
+            <div class="event">
+              <div class="event-head">
+                <span class="badge">Flight</span>
+                <span class="event-title">Alaska Airlines AS 41 · JFK → SFO</span>
+                <span class="event-time">11:30 AM → 2:50 PM</span>
+              </div>
+              <p class="event-sub">Note the airport split: arrival was Newark, departure is JFK.</p>
+              <dl class="facts">
+                <div class="fact"><dt>Confirmation</dt><dd>GSWONS</dd></div>
+                <div class="fact"><dt>Seats</dt><dd>Joseph 6D, Xin Yi 6E</dd></div>
+                <div class="fact"><dt>Cabin</dt><dd>Premium Class selected</dd></div>
+                <div class="fact"><dt>Tracking ident</dt><dd>ASA41</dd></div>
+              </dl>
+              <a class="track-link" href="https://www.flightaware.com/live/flight/ASA41" target="_blank" rel="noreferrer">Track on FlightAware</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ================= NOTES ================= -->
+      <section class="endnotes phase" id="notes">
+        <h2>Notes &amp; loose ends</h2>
+        <div class="endnotes-grid">
+          <div>
+            <h3 class="gaps">Open planning gaps</h3>
+            <ul>
+              <li>Confirm Linda/Xin Yi is on the Delta/Air France and Icelandair Norway flights; the reservation emails found list Joseph's seats.</li>
+              <li>Confirm whether the Jul 2 Canopy overnight should list 2 adults; the new confirmation email shows 1 adult.</li>
+              <li>Oslo city day (Jun 28) and evening plans in Flåm and Bergen are still open.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Logistics worth remembering</h3>
+            <ul>
+              <li>The Flåm room switch is intentional: apartment on Jun 29, hotel room with balcony on Jun 30 — same Flåmsbrygga complex, store luggage between rooms.</li>
+              <li>The return has an airport split: Icelandair lands at Newark on Jul 2, then Alaska departs from JFK the next morning.</li>
+              <li>The first Jersey City stay (Jun 24–27) covers the late Jun 26 JFK departure night.</li>
+              <li>Icelandair includes one checked bag, one carry-on, and one personal item for Joseph; the KEF connection is 1 h 10 min.</li>
+              <li>Both Norway trains change at Myrdal — the platform walk is about a minute in each direction.</li>
+            </ul>
+          </div>
+        </div>
+
+        <footer>
+          Built from reservation details found in Gmail plus dates and confirmation codes provided in chat. Last updated June 11, 2026.
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
